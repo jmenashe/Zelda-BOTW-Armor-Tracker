@@ -288,11 +288,6 @@ var app = function () {
     checkboxes = $("input[type=checkbox]");
     canvases = $("canvas");
     window.addEventListener("click", function (event) {
-      var target = $(event.target);
-      console.log('classic click, event target:', event.target, 'button:', event.button);
-      if (event.button !== 2) {
-        toggleTick(target);
-      }
       countMats();
       doSave();
     });
@@ -361,8 +356,9 @@ var app = function () {
       console.log('child canvases:', items.length);
       items.each(function(){
         var canvas = $(this);
-        console.log('active canvas thing:', canvas);
-        console.log('active canvas thing ticked?:', canvas.prop('ticked'));
+        if(canvas.prop('ticked')) {
+          return;
+        }
         var upgrades = canvas[0].upgrades;
         for (var i = 0; i < upgrades.length; i++) {
           var upgrade = upgrades[i];
