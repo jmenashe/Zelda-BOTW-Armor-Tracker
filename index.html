@@ -9,6 +9,9 @@
   <meta name="description" content="Zelda Breath of the Wild Armor Tracker. Work out materials required to complete upgrades. Work out what you can sell and what to keep.">
   <meta name="keywords" content="Zelda,BOTW,Beath,Wild,Nintendo,Switch,Wii,WiiU,Joycon,Bow,Arrow,Armor,Upgrade,Tracker,Materials,Fairy,Shrine,Hylian,Soldier,Zora,Flambreaker,Guardian,Link">
   <meta name="author" content="Volv">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/armor_data.js"></script>
+  <script src="js/index.js"></script>
 </head>
 
 <body>
@@ -35,20 +38,12 @@
   <a href="http://volv.org/zelda/features.html" target="_blank">Features</a> -
   <a href="http://artsyomni.com/hyliaserif">Font by Omni Jacala</a>
 </p>
-  
-  <script src="js/index.js"></script>
 
-  <script>
-
-    (function(V,o,l,v){V.GoogleAnalyticsObject=l;V[l]||(V[l]=function(){
-      (V[l].q=V[l].q||[]).push(arguments)});V[l].l=+new Date;v=o.createElement('script');
-    var e=o.scripts[0];v.src='//www.google-analytics.com/analytics.js';
-    e.parentNode.insertBefore(v,e)}(window,document,'ga');
-
-    ga('create', 'UA-18264723-1', 'auto');
-    ga('send', 'pageview');
-
-  </script>
+<script>
+$(function(){
+  app.init();
+})
+</script>
 
 </body>
 </html>
